@@ -1,0 +1,82 @@
+[
+  {
+    "title": "The Surprising Truth About What Motivates Us",
+    "author": "Daniel Pink",
+    "source": "RSA Animate",
+    "url": "https://www.youtube.com/watch?v=u6XAPnuFjJc",
+    "badge": "❤",
+    "review": "A compelling breakdown of intrinsic vs extrinsic motivation. The animation format makes complex research accessible."
+  },
+  {
+    "title": "1,000 True Fans",
+    "author": "Kevin Kelly",
+    "source": "The Technium",
+    "url": "https://kk.org/thetechnium/1000-true-fans/",
+    "badge": "❤",
+    "review": "The essay that launched a thousand creator economies. Still the clearest articulation of how the internet changes who can make a living from their work."
+  },
+  {
+    "title": "The Gervais Principle",
+    "author": "Venkatesh Rao",
+    "source": "Ribbonfarm",
+    "url": "https://www.ribbonfarm.com/2009/10/07/the-gervais-principle-or-the-office-according-to-the-office/",
+    "badge": "❤",
+    "review": "Uses The Office as a lens for understanding organizational dynamics. Dense but rewarding."
+  },
+  {
+    "title": "Meditations on Moloch",
+    "author": "Scott Alexander",
+    "source": "Slate Star Codex",
+    "url": "https://slatestarcodex.com/2014/07/30/meditations-on-moloch/",
+    "badge": "★",
+    "review": "The definitive essay on coordination failures and why systems optimize for outcomes nobody wants. Changed how I think about incentives."
+  },
+  {
+    "title": "Politics and the English Language",
+    "author": "George Orwell",
+    "source": "Horizon",
+    "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/",
+    "badge": "❤",
+    "review": "Orwell's rules for clear writing. Should be required reading for anyone who puts words on a page."
+  },
+  {
+    "title": "What You'll Wish You'd Known",
+    "author": "Paul Graham",
+    "source": "paulgraham.com",
+    "url": "http://www.paulgraham.com/hs.html",
+    "badge": null,
+    "review": "Advice to high schoolers that applies to anyone figuring out what to do with their life."
+  },
+  {
+    "title": "This Is Water",
+    "author": "David Foster Wallace",
+    "source": "Kenyon Commencement",
+    "url": "https://fs.blog/david-foster-wallace-this-is-water/",
+    "badge": "❤",
+    "review": "The antidote to default settings. A reminder that awareness is a choice you make every day."
+  },
+  {
+    "title": "The Premium Mediocre Life of Maya Millennial",
+    "author": "Venkatesh Rao",
+    "source": "Ribbonfarm",
+    "url": "https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/",
+    "badge": null,
+    "review": "Captures a specific kind of aspirational consumption that feels uncomfortably familiar."
+  },
+  {
+    "title": "How to Do What You Love",
+    "author": "Paul Graham",
+    "source": "paulgraham.com",
+    "url": "http://www.paulgraham.com/love.html",
+    "badge": "❤",
+    "review": "The essay I return to whenever I'm questioning whether I'm on the right path."
+  },
+  {
+    "title": "The Tyranny of Structurelessness",
+    "author": "Jo Freeman",
+    "source": "jofreeman.com",
+    "url": "https://www.jofreeman.com/joreen/tyranny.htm",
+    "badge": "❤",
+    "review": "Written about 70s feminist organizations but applies to any group that thinks it can operate without explicit power structures. Spoiler: you can't."
+  }
+]
