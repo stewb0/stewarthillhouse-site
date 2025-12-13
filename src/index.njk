@@ -84,6 +84,9 @@ title: Drew Coffman
       </div>
 
       <div class="tab-content active" id="tab-books">
+        <div class="search-box">
+          <input type="text" id="book-search" placeholder="Search books by title or author..." oninput="searchBooks()">
+        </div>
         <div class="sort-controls">
           <span>Filter:</span>
           <button class="sort-btn active" onclick="sortBooks('all')">All</button>
@@ -103,6 +106,9 @@ title: Drew Coffman
       </div>
 
       <div class="tab-content" id="tab-movies">
+        <div class="search-box">
+          <input type="text" id="movie-search" placeholder="Search movies by title..." oninput="searchMovies()">
+        </div>
         <div class="sort-controls">
           <span>Filter:</span>
           <button class="sort-btn active" onclick="sortMovies('all')">All</button>
@@ -238,34 +244,57 @@ title: Drew Coffman
       document.getElementById('book-count').textContent = `${total} books`;
     }
 
-    // Book sort
+    // Book sort and search
     let currentSort = 'all';
+    let currentBookSearch = '';
+
+    function searchBooks() {
+      const searchInput = document.getElementById('book-search');
+      currentBookSearch = searchInput.value.toLowerCase();
+      filterAndDisplayBooks();
+    }
+
     function sortBooks(type) {
       currentSort = type;
-      
+
       document.querySelectorAll('#tab-books .sort-btn').forEach(btn => {
         btn.classList.remove('active');
       });
       event.target.classList.add('active');
-      
+
+      filterAndDisplayBooks();
+    }
+
+    function filterAndDisplayBooks() {
       Object.keys(books).forEach(year => {
         const grid = document.getElementById(`books-${year}`);
         if (grid) {
           grid.innerHTML = '';
-          
+
           let filteredBooks = books[year];
-          if (type === 'top') {
-            filteredBooks = books[year].filter(b => b.badge === '★');
-          } else if (type === 'favorites') {
-            filteredBooks = books[year].filter(b => b.badge === '❤' || b.badge === '★');
+
+          // Apply badge filter
+          if (currentSort === 'top') {
+            filteredBooks = filteredBooks.filter(b => b.badge === '★');
+          } else if (currentSort === 'favorites') {
+            filteredBooks = filteredBooks.filter(b => b.badge === '❤' || b.badge === '★');
           }
-          
+
+          // Apply search filter
+          if (currentBookSearch) {
+            filteredBooks = filteredBooks.filter(b => {
+              const titleMatch = b.title.toLowerCase().includes(currentBookSearch);
+              const authorMatch = b.author && b.author.toLowerCase().includes(currentBookSearch);
+              return titleMatch || authorMatch;
+            });
+          }
+
           filteredBooks.forEach(book => {
             grid.appendChild(createBookElement(book));
           });
         }
       });
-      
+
       document.querySelectorAll('#tab-books .year-label').forEach(label => {
         const year = label.textContent;
         const grid = document.getElementById(`books-${year}`);
@@ -277,7 +306,7 @@ title: Drew Coffman
           grid.style.display = 'grid';
         }
       });
-      
+
       updateBookCount();
     }
 
@@ -375,33 +404,53 @@ title: Drew Coffman
 
     // Movies
     let currentMovieSort = 'all';
-    
+    let currentMovieSearch = '';
+
+    function searchMovies() {
+      const searchInput = document.getElementById('movie-search');
+      currentMovieSearch = searchInput.value.toLowerCase();
+      filterAndDisplayMovies();
+    }
+
     function sortMovies(type) {
       currentMovieSort = type;
-      
+
       document.querySelectorAll('#tab-movies .sort-btn').forEach(btn => {
         btn.classList.remove('active');
       });
       event.target.classList.add('active');
-      
+
+      filterAndDisplayMovies();
+    }
+
+    function filterAndDisplayMovies() {
       Object.keys(movies).forEach(year => {
         const grid = document.getElementById(`movies-${year}`);
         if (grid) {
           grid.innerHTML = '';
-          
+
           let filteredMovies = movies[year];
-          if (type === 'top') {
-            filteredMovies = movies[year].filter(m => m.badge === '★');
-          } else if (type === 'favorites') {
-            filteredMovies = movies[year].filter(m => m.badge === '❤' || m.badge === '★');
+
+          // Apply badge filter
+          if (currentMovieSort === 'top') {
+            filteredMovies = filteredMovies.filter(m => m.badge === '★');
+          } else if (currentMovieSort === 'favorites') {
+            filteredMovies = filteredMovies.filter(m => m.badge === '❤' || m.badge === '★');
           }
-          
+
+          // Apply search filter
+          if (currentMovieSearch) {
+            filteredMovies = filteredMovies.filter(m => {
+              return m.title.toLowerCase().includes(currentMovieSearch);
+            });
+          }
+
           filteredMovies.forEach(movie => {
             grid.appendChild(createMovieElement(movie));
           });
         }
       });
-      
+
       document.querySelectorAll('.movie-year').forEach(label => {
         const year = label.textContent;
         const grid = document.getElementById(`movies-${year}`);
@@ -413,7 +462,7 @@ title: Drew Coffman
           grid.style.display = 'grid';
         }
       });
-      
+
       updateMovieCount();
     }
 
