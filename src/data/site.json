@@ -1,0 +1,17 @@
+{
+    "name": "Stewart Hillhouse",
+    "about": "Sharing big ideas about content marketing.",
+    "tagline": "Writer and operator",
+    "location": "New Brunswick, Canada",
+    "nav": [
+        { "label": "About", "url": "#about" },
+        { "label": "Writing", "url": "#writing" }
+    ],
+    "email": "you@example.com",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/your-handle/",
+      "x": "https://x.com/your-handle",
+      "github": "https://github.com/stewb0"
+    }
+  }
+  

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ site.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header>
+        <header style="position:sticky; top:0; background:white; padding:12px; border-bottom:1px solid #ddd; z-index:9999;">
+  <div style="display:flex; gap:16px; align-items:center;">
+    <a href="/" style="font-weight:bold;">{{ site.name }}</a>
+
+    <nav>
+      <ul style="display:flex; gap:12px; list-style:none; margin:0; padding:0;">
+        {% for item in site.nav %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+</body>
+</html>
