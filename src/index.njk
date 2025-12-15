@@ -16,24 +16,11 @@ layout: layouts/base.njk
 <body>
   <div class="page-wrapper" id="page-wrapper">
   <div class="container">
-    <header class="fade-in">
-      <div class="header-left">
-        <div class="site-title"><a href="/">Stewart Hillhouse</a></div>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#writing">Writing</a>
-          <a href="#shelf">Shelf</a>
-        </nav>
-      </div>
-      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
-        <span class="theme-icon">☀</span>
-      </button>
-    </header>
-
+    {#
     <div class="hero-image fade-in">
       <img src="images/header.jpeg">
     </div>
-
+    #}
     <div class="main-grid">
       <div class="about-section fade-in" id="about">
         <h2 class="section-title">About Me</h2>
@@ -77,6 +64,7 @@ layout: layouts/base.njk
       </div>
     </div>
 
+  {#
     <section class="bookshelf-section fade-in" id="shelf">
       <div class="shelf-tabs">
         <button class="shelf-tab active" onclick="switchTab('books')">Bookshelf</button>
@@ -172,7 +160,7 @@ layout: layouts/base.njk
     </div>
   </div>
   </div>
-
+#}
   <script>
     // Data from JSON files (injected at build time)
     const books = {{ books | dump | safe }};

@@ -8,6 +8,7 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   line-height: 1.6;
   font-size: 14px;
+  background-color: #f5f5f0;
 }
 
 .page-wrapper {
@@ -48,15 +49,18 @@ a:hover {
 
 /* Header */
 header {
-  margin-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 24px 24px 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .header-left {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
 }
 
