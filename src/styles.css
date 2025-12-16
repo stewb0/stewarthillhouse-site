@@ -9,6 +9,11 @@ body {
   line-height: 1.6;
   font-size: 14px;
   background-color: #f5f5f0;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #1a1a18;
 }
 
 .page-wrapper {
@@ -55,6 +60,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode header {
+  color: #4ade4a;
+  background-color: #1a1a18;
+}
+
+body.dark-mode .site-title a {
+  color: #4ade4a;
+}
+
+body.dark-mode nav a {
+  color: #4ade4a;
 }
 
 .header-left {

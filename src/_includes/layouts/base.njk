@@ -14,9 +14,11 @@
     <header class="fade-in">
       <div class="header-left">
         <div class="site-title"><a href="/">{{ site.name }}</a></div>
+        {#
         <nav>
           <a href="/#about">About</a>
           <a href="/blog">Writing</a>
+        #}
         </nav>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
@@ -32,16 +34,19 @@
       // Theme toggle functionality
       function toggleTheme() {
         const wrapper = document.getElementById('page-wrapper');
+        const body = document.body;
         if (!wrapper) return;
         
         const isDark = wrapper.classList.contains('dark-mode');
         
         if (isDark) {
           wrapper.classList.remove('dark-mode');
+          body.classList.remove('dark-mode');
           localStorage.setItem('theme', 'light');
           updateThemeIcon('light');
         } else {
           wrapper.classList.add('dark-mode');
+          body.classList.add('dark-mode');
           localStorage.setItem('theme', 'dark');
           updateThemeIcon('dark');
         }
@@ -56,11 +61,13 @@
 
       function loadTheme() {
         const wrapper = document.getElementById('page-wrapper');
+        const body = document.body;
         if (!wrapper) return;
         
         const savedTheme = localStorage.getItem('theme') || 'light';
         if (savedTheme === 'dark') {
           wrapper.classList.add('dark-mode');
+          body.classList.add('dark-mode');
         }
         updateThemeIcon(savedTheme);
       }
