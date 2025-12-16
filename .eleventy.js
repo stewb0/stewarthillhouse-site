@@ -6,6 +6,11 @@ module.exports = function(eleventyConfig) {
   // Watch for changes
   eleventyConfig.addWatchTarget("src/data/");
   
+  // Add limit filter
+  eleventyConfig.addFilter("limit", function(array, limit) {
+    return array.slice(0, limit);
+  });
+  
   return {
     dir: {
       input: "src",

@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: Blog
+---
+<div class="page-wrapper" id="page-wrapper">
+  <div class="container">
+    <h1 class="page-title fade-in">Blog</h1>
+    
+    <div class="blog-list fade-in">
+      {%- for post in blog | reverse %}
+      <article class="blog-list-item">
+        <div>
+          <h2 class="blog-list-title">{{ post.title }}</h2>
+          <p class="blog-list-excerpt">{{ post.excerpt }}</p>
+          <div class="blog-list-date">{{ post.date }}</div>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+

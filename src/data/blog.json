@@ -1,0 +1,45 @@
+[
+  {
+    "title": "The Future of Content Marketing",
+    "slug": "future-of-content-marketing",
+    "date": "2024-12-15",
+    "excerpt": "Exploring how AI and new platforms are reshaping content creation and distribution.",
+    "featured": true
+  },
+  {
+    "title": "Building a Content Engine That Scales",
+    "slug": "content-engine-that-scales",
+    "date": "2024-12-10",
+    "excerpt": "Lessons learned from building content teams that drive real business results.",
+    "featured": true
+  },
+  {
+    "title": "Why Storytelling Matters in B2B",
+    "slug": "storytelling-in-b2b",
+    "date": "2024-12-05",
+    "excerpt": "Moving beyond features and benefits to connect with your audience on a deeper level.",
+    "featured": true
+  },
+  {
+    "title": "The Content Marketing Playbook",
+    "slug": "content-marketing-playbook",
+    "date": "2024-11-28",
+    "excerpt": "A practical guide to creating content that converts, from ideation to distribution.",
+    "featured": true
+  },
+  {
+    "title": "Measuring What Matters in Content",
+    "slug": "measuring-content-metrics",
+    "date": "2024-11-20",
+    "excerpt": "Beyond vanity metrics: how to track content that actually moves the needle.",
+    "featured": false
+  },
+  {
+    "title": "Content Distribution Strategies",
+    "slug": "content-distribution-strategies",
+    "date": "2024-11-15",
+    "excerpt": "Creating great content is only half the battle. Here's how to get it seen.",
+    "featured": false
+  }
+]
+
