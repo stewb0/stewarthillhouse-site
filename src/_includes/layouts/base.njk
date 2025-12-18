@@ -25,10 +25,10 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
   </head>
-  <body>
+  <body class="dark-mode">
     <header class="fade-in">
       <div class="header-left">
         <div class="site-title"><a href="/">{{ site.name }}</a></div>
@@ -39,60 +39,11 @@
         #}
         </nav>
       </div>
-      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
-        <span class="theme-icon">☀</span>
-      </button>
     </header>
 
     <main>
       {{ content | safe }}
     </main>
 
-    <script>
-      // Theme toggle functionality
-      function toggleTheme() {
-        const wrapper = document.getElementById('page-wrapper');
-        const body = document.body;
-        if (!wrapper) return;
-        
-        const isDark = wrapper.classList.contains('dark-mode');
-        
-        if (isDark) {
-          wrapper.classList.remove('dark-mode');
-          body.classList.remove('dark-mode');
-          localStorage.setItem('theme', 'light');
-          updateThemeIcon('light');
-        } else {
-          wrapper.classList.add('dark-mode');
-          body.classList.add('dark-mode');
-          localStorage.setItem('theme', 'dark');
-          updateThemeIcon('dark');
-        }
-      }
-
-      function updateThemeIcon(theme) {
-        const icon = document.querySelector('.theme-icon');
-        if (icon) {
-          icon.textContent = theme === 'dark' ? '☽' : '☀';
-        }
-      }
-
-      function loadTheme() {
-        const wrapper = document.getElementById('page-wrapper');
-        const body = document.body;
-        if (!wrapper) return;
-        
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        if (savedTheme === 'dark') {
-          wrapper.classList.add('dark-mode');
-          body.classList.add('dark-mode');
-        }
-        updateThemeIcon(savedTheme);
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        loadTheme();
-      });
-    </script>
   </body>
 </html>

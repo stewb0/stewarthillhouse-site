@@ -15,7 +15,7 @@ description: "Stewart Hillhouse - Content marketing strategist sharing insights 
   ]
 }
 </script>
-<div class="page-wrapper" id="page-wrapper">
+<div class="page-wrapper dark-mode" id="page-wrapper">
   <div class="container">
     {#
     <div class="hero-image fade-in">
@@ -171,34 +171,7 @@ description: "Stewart Hillhouse - Content marketing strategist sharing insights 
     const movies = {{ movies | dump | safe }};
     const essays = {{ essays | dump | safe }};
 
-    // Theme toggle
-    function toggleTheme() {
-      const wrapper = document.getElementById('page-wrapper');
-      const isDark = wrapper.classList.contains('dark-mode');
-      
-      if (isDark) {
-        wrapper.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-        updateThemeIcon('light');
-      } else {
-        wrapper.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-        updateThemeIcon('dark');
-      }
-    }
-
-    function updateThemeIcon(theme) {
-      const icon = document.querySelector('.theme-icon');
-      icon.textContent = theme === 'dark' ? '☽' : '☀';
-    }
-
-    function loadTheme() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      if (savedTheme === 'dark') {
-        document.getElementById('page-wrapper').classList.add('dark-mode');
-      }
-      updateThemeIcon(savedTheme);
-    }
+    // Dark mode is applied directly in HTML, no function needed
 
     // Tab switching
     function switchTab(tab) {
@@ -647,7 +620,6 @@ description: "Stewart Hillhouse - Content marketing strategist sharing insights 
 
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
-      loadTheme();
       populateBooks();
       updateBookCount();
       populateMovies();
