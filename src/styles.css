@@ -8,23 +8,23 @@ body {
   font-family: 'Inconsolata', monospace;
   line-height: 1.6;
   font-size: 16px;
-  background-color: #f5f5f0;
+  background-color: #141414;
   transition: background-color 0.3s ease;
 }
 
 body.dark-mode {
-  background-color: #1a1a18;
+  background-color: #141414;
 }
 
 .page-wrapper {
-  background-color: #f5f5f0;
+  background-color: #141414;
   color: #000000;
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .page-wrapper.dark-mode {
-  background-color: #1a1a18;
+  background-color: #141414;
   color: #ffffff;
 }
 
@@ -61,7 +61,7 @@ a:hover {
 /* Header */
 header {
   max-width: 1200px;
-  margin: 0 auto 40px;
+  margin: 20px auto 10px;
   padding: 24px 24px 0;
   display: flex;
   justify-content: space-between;
@@ -71,7 +71,7 @@ header {
 
 body.dark-mode header {
   color: #ffffff;
-  background-color: #1a1a18;
+  background-color: #141414;
 }
 
 body.dark-mode .site-title a {
@@ -140,6 +140,17 @@ body.dark-mode nav a {
 
 .site-title a {
   text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.site-title a:hover {
+  color: #000000;
+  background-color: #FFC900;
+}
+
+body.dark-mode .site-title a:hover {
+  color: #000000;
+  background-color: #FFC900;
 }
 
 nav {
@@ -677,7 +688,7 @@ nav {
 }
 
 .dark-mode .book-cover {
-  background-color: #2a2a26;
+  background-color: #141414;
   border-color: #FFC900;
 }
 
@@ -722,7 +733,7 @@ nav {
 }
 
 .dark-mode .book-cover .badge {
-  background-color: #1a1a18;
+  background-color: #141414;
 }
 
 .book-cover .badge.heart {
@@ -758,7 +769,7 @@ nav {
 }
 
 .dark-mode .search-box input {
-  background-color: #2a2a26;
+  background-color: #141414;
   border-color: #FFC900;
   color: #ffffff;
 }
@@ -782,7 +793,7 @@ nav {
 
 .dark-mode .search-box input:focus {
   border-color: #FFC900;
-  background-color: #1a1a18;
+  background-color: #141414;
   box-shadow: 0 0 0 2px rgba(255, 201, 0, 0.2);
 }
 
@@ -880,7 +891,7 @@ nav {
 }
 
 .dark-mode .movie-poster {
-  background-color: #2a2a26;
+  background-color: #141414;
   border-color: #FFC900;
 }
 
@@ -925,7 +936,7 @@ nav {
 }
 
 .dark-mode .movie-poster .badge {
-  background-color: #1a1a18;
+  background-color: #141414;
 }
 
 .movie-poster .badge.heart {
@@ -1015,7 +1026,7 @@ nav {
 }
 
 .dark-mode .modal {
-  background-color: #1a1a18;
+  background-color: #141414;
   border-color: #FFC900;
 }
 
