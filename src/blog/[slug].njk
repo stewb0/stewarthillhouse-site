@@ -5,14 +5,39 @@ pagination:
   size: 1
   alias: post
 permalink: "blog/{{ post.data.slug }}/"
+description: "{{ post.data.excerpt }}"
+excerpt: "{{ post.data.excerpt }}"
+ogType: "article"
 ---
 <div class="page-wrapper" id="page-wrapper">
   <div class="container">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ post.data.title }}",
+      "description": "{{ post.data.excerpt }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}"
+      },
+      "datePublished": "{{ post.data.date }}",
+      "publisher": {
+        "@type": "Person",
+        "name": "{{ site.name }}"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}/blog/{{ post.data.slug }}/"
+      }
+    }
+    </script>
     <div class="blog-post-grid">
-      <article class="blog-post-content fade-in">
+      <article class="blog-post-content fade-in" itemscope itemtype="https://schema.org/BlogPosting">
         <a href="/" class="back-button">← Back</a>
-        <h1 class="blog-post-title">{{ post.data.title }}</h1>
-        <div class="blog-post-body">
+        <h1 class="blog-post-title" itemprop="headline">{{ post.data.title }}</h1>
+        <div class="blog-post-body" itemprop="articleBody">
           {{ post.content | safe }}
         </div>
       </article>

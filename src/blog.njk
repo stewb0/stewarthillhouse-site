@@ -1,7 +1,21 @@
 ---
 layout: layouts/base.njk
 title: Blog
+description: "Blog posts and articles by Stewart Hillhouse on content marketing, B2B storytelling, and marketing strategy."
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "{{ site.name }} Blog",
+  "description": "Content marketing insights and strategies",
+  "url": "{{ site.url }}/blog",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.name }}"
+  }
+}
+</script>
 <div class="page-wrapper" id="page-wrapper">
   <div class="container">
     <h1 class="page-title fade-in">Blog</h1>

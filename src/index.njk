@@ -1,6 +1,20 @@
 ---
 layout: layouts/base.njk
+description: "Stewart Hillhouse - Content marketing strategist sharing insights on building content engines, B2B storytelling, and marketing leadership."
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.name }}",
+  "description": "{{ site.about }}",
+  "url": "{{ site.url }}",
+  "sameAs": [
+    "{{ site.links.linkedin }}",
+    "{{ site.links.github }}"
+  ]
+}
+</script>
 <div class="page-wrapper" id="page-wrapper">
   <div class="container">
     {#
