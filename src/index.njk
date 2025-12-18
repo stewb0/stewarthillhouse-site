@@ -46,7 +46,7 @@ layout: layouts/base.njk
         <ul class="writing-list">
           {%- for post in blog | reverse %}
           <li>
-            <a href="/blog">{{ post.title }}</a>
+            <a href="/blog/{{ post.slug }}">{{ post.title }}</a>
             <div class="source">{{ post.date }}</div>
           </li>
           {%- endfor %}

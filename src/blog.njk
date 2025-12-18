@@ -9,11 +9,11 @@ title: Blog
     <div class="blog-list fade-in">
       {%- for post in blog | reverse %}
       <article class="blog-list-item">
-        <div>
+        <a href="/blog/{{ post.slug }}">
           <h2 class="blog-list-title">{{ post.title }}</h2>
           <p class="blog-list-excerpt">{{ post.excerpt }}</p>
           <div class="blog-list-date">{{ post.date }}</div>
-        </div>
+        </a>
       </article>
       {%- endfor %}
     </div>
