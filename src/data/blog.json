@@ -4,7 +4,7 @@
     "slug": "future-of-content-marketing",
     "date": "2024-12-15",
     "excerpt": "Exploring how AI and new platforms are reshaping content creation and distribution.",
-    "featured": true,
+    "featured": false,
     "content": "The landscape of content marketing is evolving rapidly. Artificial intelligence and emerging platforms are fundamentally changing how we create, distribute, and consume content.\n\nAI tools are making content creation more accessible, allowing marketers to produce high-quality content at scale. However, this also means that authentic, human-created content becomes even more valuable.\n\nNew platforms continue to emerge, each with its own unique audience and content format. The key is understanding where your audience spends their time and creating content that fits naturally into those spaces.\n\nThe future belongs to marketers who can balance automation with authenticity, scale with personalization, and data with creativity."
   },
   {
@@ -28,7 +28,7 @@
     "slug": "content-marketing-playbook",
     "date": "2024-11-28",
     "excerpt": "A practical guide to creating content that converts, from ideation to distribution.",
-    "featured": true,
+    "featured": false,
     "content": "Effective content marketing requires a systematic approach. Here's a playbook that works:\n\n**Ideation**: Start with your audience's pain points. What questions do they have? What challenges do they face? Use tools like Answer the Public or customer interviews to find topics.\n\n**Creation**: Focus on depth over breadth. One comprehensive guide is more valuable than ten surface-level posts. Aim to be the definitive resource on your topic.\n\n**Optimization**: Optimize for both search engines and humans. Use keywords naturally, structure content for readability, and include clear calls-to-action.\n\n**Distribution**: Don't just publish and hope. Share across multiple channels—your website, social media, email newsletters, and relevant communities.\n\n**Measurement**: Track what matters. Look beyond vanity metrics to engagement, leads generated, and revenue attributed to content."
   },
   {
@@ -46,6 +46,14 @@
     "excerpt": "Creating great content is only half the battle. Here's how to get it seen.",
     "featured": false,
     "content": "Great content that nobody sees is worthless. Distribution is just as important as creation.\n\n**Owned channels**: Your website, blog, and email list are your most valuable distribution channels. Build these assets consistently.\n\n**Social media**: Share content across relevant platforms, but adapt the format for each. What works on LinkedIn won't work on Twitter.\n\n**Communities**: Find where your audience gathers—forums, Slack groups, Reddit communities. Share valuable content without being spammy.\n\n**Partnerships**: Collaborate with other creators, companies, or influencers in your space. Guest posts and co-created content expand your reach.\n\n**Repurposing**: Turn one piece of content into multiple formats—blog post becomes a video, becomes a podcast, becomes a Twitter thread.\n\nThe best distribution strategy is one that reaches your specific audience where they already spend time."
+  },
+  {
+    "title": "Why Marketing Leaders Aren't Hiring",
+    "slug": "why-marketing-leaders-arent-hiring",
+    "date": "2025-12-18",
+    "excerpt": "They no longer see the marketing org as 'roles', but as tasks that need to get done.",
+    "featured": true,
+    "content": "Marketing leaders aren't hiring for one simple reason:\nThey no longer see the marketing org as “roles” but as tasks that need to get done.\n\nA CMO used to default to: hire in-house for core work, maybe hire an agency for campaigns. But budget constraints and AI have shaken that model.\n\nNow each task has multiple competing paths to execution:\n- In-house hire → high control, long ramp, high fixed cost\n- Agency → expertise, speed, external perspective, higher per-task cost\n- Freelancer → flexible, narrow skill coverage, variable quality\n- AI workflow → cheap, instant, scalable, but unreliable and requires oversight\n\nThe difficulty for marketing leaders is that the time horizon is short: they need results this quarter, and switching costs are high if they misallocate.\n\nSo GTM strategy becomes an allocation game:\n\nWhich tasks are core differentiators → keep in-house\nWhich are high-stakes but episodic → outsource to agency\nWhich are specialized but limited → hire freelancers\nWhich are repeatable but non-differentiating → automate with AI workflows\n\nThe job of a marketing leader today is less about building a perfect team structure and more about being a portfolio manager to execute on their vision.\n\nThe most savvy leaders aren’t asking, “Do I need another hire?” They’re asking, “For this specific task, what’s the right execution path given cost, speed, quality, and time-horizon?”\n\nBut I've never been a CMO, so maybe I'm way off.\n\nOriginally posted <a href='https://www.linkedin.com/posts/stewarthillhouse_marketing-leaders-arent-hiring-for-one-simple-activity-7366827456642654209-PhgO/' target='_blank'>here</a>."    
   }
 ]
 

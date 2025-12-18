@@ -7,12 +7,11 @@ title: Blog
     <h1 class="page-title fade-in">Blog</h1>
     
     <div class="blog-list fade-in">
-      {%- for post in blog | reverse %}
+      {%- for post in collections.blog %}
       <article class="blog-list-item">
-        <a href="/blog/{{ post.slug }}">
-          <h2 class="blog-list-title">{{ post.title }}</h2>
-          <p class="blog-list-excerpt">{{ post.excerpt }}</p>
-          <div class="blog-list-date">{{ post.date }}</div>
+        <a href="/blog/{{ post.data.slug }}">
+          <h2 class="blog-list-title">{{ post.data.title }}</h2>
+          <p class="blog-list-excerpt">{{ post.data.excerpt }}</p>
         </a>
       </article>
       {%- endfor %}

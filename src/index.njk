@@ -44,10 +44,10 @@ layout: layouts/base.njk
           <a href="/blog" class="see-all-link">See All →</a>
         </div>
         <ul class="writing-list">
-          {%- for post in blog | reverse %}
+          {%- for post in collections.blog %}
           <li>
-            <a href="/blog/{{ post.slug }}">{{ post.title }}</a>
-            <div class="source">{{ post.date }}</div>
+            <a href="/blog/{{ post.data.slug }}">{{ post.data.title }}</a>
+            <div class="source">{{ post.data.excerpt }}</div>
           </li>
           {%- endfor %}
         </ul>

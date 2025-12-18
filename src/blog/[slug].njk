@@ -1,23 +1,19 @@
 ---
 layout: layouts/base.njk
 pagination:
-  data: blog
+  data: collections.blog
   size: 1
   alias: post
-permalink: "blog/{{ post.slug }}/"
+permalink: "blog/{{ post.data.slug }}/"
 ---
 <div class="page-wrapper" id="page-wrapper">
   <div class="container">
     <div class="blog-post-grid">
       <article class="blog-post-content fade-in">
         <a href="/" class="back-button">← Back</a>
-        <h1 class="blog-post-title">{{ post.title }}</h1>
-        <div class="blog-post-date">{{ post.date }}</div>
+        <h1 class="blog-post-title">{{ post.data.title }}</h1>
         <div class="blog-post-body">
-          {% set paragraphs = post.content.split('\n\n') %}
-          {% for paragraph in paragraphs %}
-            <p>{{ paragraph | replace('\n', '<br>') | safe }}</p>
-          {% endfor %}
+          {{ post.content | safe }}
         </div>
       </article>
 
@@ -26,14 +22,12 @@ permalink: "blog/{{ post.slug }}/"
           <h2 class="sidebar-title">Other Writing</h2>
           <a href="/blog" class="see-all-link">See All →</a>
         </div>
-        <ul class="sidebar-posts-list">
-          {%- for otherPost in blog %}
-            {%- if otherPost.slug != post.slug %}
+        <ul class="writing-list">
+          {%- for otherPost in collections.blog %}
+            {%- if otherPost.data.slug != post.data.slug %}
             <li>
-              <a href="/blog/{{ otherPost.slug }}">
-                <h3 class="sidebar-post-title">{{ otherPost.title }}</h3>
-                <div class="sidebar-post-date">{{ otherPost.date }}</div>
-              </a>
+              <a href="/blog/{{ otherPost.data.slug }}">{{ otherPost.data.title }}</a>
+              <div class="source">{{ otherPost.data.excerpt }}</div>
             </li>
             {%- endif %}
           {%- endfor %}
