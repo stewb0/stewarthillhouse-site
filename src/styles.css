@@ -89,6 +89,48 @@ body.dark-mode nav a {
   gap: 8px;
 }
 
+.header-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header-connect {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #FFC900;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+}
+
+.header-connect:hover {
+  opacity: 1;
+  background-color: #FFC900;
+  color: #000000;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+}
+
+.header-icon:hover {
+  opacity: 1;
+  color: #FFC900;
+}
+
+.header-icon svg {
+  display: block;
+}
+
 .site-title {
   font-size: 14px;
   font-weight: 600;
@@ -162,9 +204,10 @@ nav {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   margin-bottom: 80px;
+  align-items: start;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .main-grid {
     grid-template-columns: 1fr;
     gap: 40px;
